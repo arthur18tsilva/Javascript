@@ -1,49 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Calculadora Simples</title>
-</head>
+  <meta charset="UTF-8">
+  <title>Exemplo JavaScript 02</title>
+  <script src="script-02.js"></script>
+
 <body>
-  <h1>Calculadora</h1>
 
-  <p>Valor A<input id="valor01" type="number"></p>
-  <p>Valor B<input id="valor02" type="number"></p>
-  <br><br>
+<h2>Primeiros passos JavaScritp 02</h2>
 
-  <button onclick="calcular('+')">+</button>
-  <button onclick="calcular('-')">-</button>
-  <button onclick="calcular('*')">*</button>
-  <button onclick="calcular('/')">/</button>
-  <button onclick="calcular('^')">^</button>
+<!--Exemplo de soma function -->
+<p>Valor A: <input type="text" id="valor01"></p>
+<p>Valor B: <input type="text" id="valor02"></p>
 
-  <h2>Resultado: <span id="resultado">---</span></h2>
+<!--Exemplo de soma function -->
+<button type="button"
+    onclick="soma()">
+Clique para somar os valores.
+</button>
 
-  <script>
-    function calcular(operador) {
-      const n1 = parseFloat(document.getElementById("num1").value);
-      const n2 = parseFloat(document.getElementById("num2").value);
-      let resultado;
+<p>Resultado: <label id="demo"> </label></p>
 
-      if (isNaN(n1) || isNaN(n2)) {
-        resultado = "Digite números válidos";
-      } else {
-        if (operador === '+') {
-          resultado = n1 + n2;
-        } else if (operador === '-') {
-          resultado = n1 - n2;
-        } else if (operador === '*') {
-          resultado = n1 * n2;
-        } else if (operador === '/') {
-          resultado = n2 !== 0 ? n1 / n2 : "Erro: divisão por zero";
-        } else if (operador === '^') {
-          resultado = Math.pow(n1, n2);
-        } else {
-          resultado = "Operação inválida";
-        }
-      }
-
-      document.getElementById("resultado").textContent = resultado;
-    }
-  </script>
 </body>
-</html>
+</html> 
